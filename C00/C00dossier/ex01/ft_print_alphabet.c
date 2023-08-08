@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abiel-jason <abiel-jason@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:09:05 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/06 14:13:49 by aanson           ###   ########.fr       */
+/*   Updated: 2023/08/08 19:51:42 by abiel-jason      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,5 @@ void	ft_print_alphabet(void)
 {
 	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
 }
+test from mac 
+
