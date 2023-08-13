@@ -6,7 +6,7 @@
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 20:48:19 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/13 12:57:02 by aanson           ###   ########.fr       */
+/*   Updated: 2023/08/13 16:26:14 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,4 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*test*/
