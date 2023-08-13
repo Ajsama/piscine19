@@ -6,8 +6,22 @@
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 20:48:19 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/10 20:45:53 by aanson           ###   ########.fr       */
+/*   Updated: 2023/08/13 12:57:02 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
