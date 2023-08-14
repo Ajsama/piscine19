@@ -6,13 +6,22 @@
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 22:29:03 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/14 18:51:29 by aanson           ###   ########.fr       */
+/*   Updated: 2023/08/14 19:00:18 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strlowcase(char *str)
+char	*ft_strlowcase(char *str)
 {
-   int i ;
+	int	i;
 
-    i = 0 ;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] += 32;
+		}
+		i++;
+	}
+	return (str);
 }
