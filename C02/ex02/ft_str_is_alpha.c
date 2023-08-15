@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abiel-jason <abiel-jason@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 22:21:57 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/14 18:49:09 by aanson           ###   ########.fr       */
+/*   Updated: 2023/08/15 09:01:47 by abiel-jason      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_str_is_alpha(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-
 	if (str[i] == '\0')
 	{
 		return (1);
 	}
-
 	while (str[i] != '\0')
 	{
 		if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a'
@@ -28,7 +27,6 @@
 			i++;
 		}
 		else
-
 			return (0);
 	}
 	return (1);
