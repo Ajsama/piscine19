@@ -6,7 +6,7 @@
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 20:25:13 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/15 20:50:36 by aanson           ###   ########.fr       */
+/*   Updated: 2023/08/16 23:03:56 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ char	*ft_strcat(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int	main()
 {
-	char src[] = "Benguerir";
-	char dest[] = "1337 ";
+	char src[] = "ecole";
+	char dest[] = "42";
 	printf("%s", ft_strcat(dest, src));
-}
+}*/
