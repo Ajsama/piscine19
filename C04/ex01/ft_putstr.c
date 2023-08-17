@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 15:14:22 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/15 20:26:46 by aanson           ###   ########.fr       */
+/*   Created: 2023/08/17 17:48:43 by aanson            #+#    #+#             */
+/*   Updated: 2023/08/17 20:47:23 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int	i;
+#include <unistd.h>
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	if (!str)
 	{
-		if (s1[i] > s2[i])
-		{
-			return (1);
-		}
-		else if (s1[i] < s2[i])
-		{
-			return (-1);
-		}
+		return (0);
+	}
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
 		i++;
 	}
-	return (0);
 }
 /*#include <stdio.h>
+
 int	main(void)
 {
-	printf("%d", ft_strncmp("Hello", "HelloWorld", 4));
+	ft_putstr("Welcome to 19");
 }*/

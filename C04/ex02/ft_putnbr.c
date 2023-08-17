@@ -1,39 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 20:26:08 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/16 22:59:17 by aanson           ###   ########.fr       */
+/*   Created: 2023/08/17 17:48:47 by aanson            #+#    #+#             */
+/*   Updated: 2023/08/17 20:37:54 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	int	i;
-	int	j;
+#include <stdio.h>
+#include <unistd.h>
 
-	i = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (j < nb && src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
-/*#include <stdio.h>
 
-int	main(void)
+void	ft_putnbr(int nb)
 {
-	char src[] = "malveillance";
-	char dest[] = "max ";
-	printf("%s", ft_strncat(dest, src, 7));
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + 48);
+}
+/*int main (void)
+{
+	ft_putnbr(42);
 }*/

@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 20:25:13 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/16 23:03:56 by aanson           ###   ########.fr       */
+/*   Created: 2023/08/17 17:48:39 by aanson            #+#    #+#             */
+/*   Updated: 2023/08/17 20:48:03 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcat(char *dest, char *src)
+int	ft_strlen(char *str)
 {
 	int	i;
-	int	j;
 
+	if (!str)
+	{
+		return (0);
+	}
 	i = 0;
-	while (dest[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src [j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (i);
 }
 /*#include <stdio.h>
-int	main()
+int main (void)
 {
-	char src[] = "ecole";
-	char dest[] = "42";
-	printf("%s", ft_strcat(dest, src));
+	printf("%d",ft_strlen("ecole 19 rpz "));
 }*/
