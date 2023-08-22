@@ -6,7 +6,7 @@
 /*   By: aanson <aanson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 17:48:47 by aanson            #+#    #+#             */
-/*   Updated: 2023/08/17 20:37:54 by aanson           ###   ########.fr       */
+/*   Updated: 2023/08/21 21:22:02 by aanson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_putnbr(int nb)
 	else
 		ft_putchar(nb + 48);
 }
-/*int main (void)
+int main (void)
 {
-	ft_putnbr(42);
-}*/
+	ft_putnbr(-21);
+}
